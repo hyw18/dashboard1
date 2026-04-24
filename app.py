@@ -18,13 +18,13 @@ def send():
     level = request.form.get('level')
     if skill and level:
         if skill == "python":
-            messages.append("[backend] Python" + " / " + level)
+            messages.append("[backend] python" + " / " + level)
         elif skill == "sql":
             messages.append("[DB] sql" + " / " + level)
         elif skill == "html" or skill == "bash":
             messages.append(skill + " / " + level)
         else:
-            messages.append("[ETC]" + skill + " / " + level)
+            messages.append("[ETC] " + skill + " / " + level)
     return redirect('/')
 
 if __name__ == "__main__":
