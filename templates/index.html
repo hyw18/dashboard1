@@ -24,7 +24,18 @@
         <h2 class="mt9 text=xl font-bold">입력한 데이터</h2>
         {% for item in messages %}
             <div class="bg-green-200 p-2 m-2 rounded flex items-center gap-3">
-                <span>{{ item }}</span>
+                
+                {% if "python" in item %}
+                    <span class="text-gray-500">{{ item }}</span>
+                {% elif "sql" in item %}
+                    <span class="text-purple-500">{{ item }}</span>
+                {% elif "html" in item %}
+                    <span class="text-orange-500">{{ item }}</span>
+                {% elif "bash" in item %}
+                    <span class="text-green-500">{{ item }}</span>
+                {% else %}
+                    <span class="text-black">{{ item }}</span>
+                {% endif %}
 
             </div>
         {% endfor %}
